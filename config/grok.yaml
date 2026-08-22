@@ -1,0 +1,43 @@
+interface:
+  display_name: "PromptMaster with Grok"
+  short_description: "A systematic prompt engineering skill that takes raw, vague, or underdeveloped ideas and transforms them into high-performance, ready-to-use prompts optimized specifically for Grok’s strengths (deep reasoning, long context, wit, truth-seeking, and helpfulness)."
+  default_prompt: "I have this raw idea / basic prompt: [paste here]. Please apply PromptMaster with Grok and turn it into a high-quality, optimized prompt."
+
+metadata:
+  price: 0
+  tags:
+    - grok
+    - prompt-engineering
+    - meta
+    - productivity
+    - skill-authoring
+    - free
+  version: 1.0.0
+  target_agent: grok
+  agensi_slug: promptmaster-with-grok
+
+compatibility:
+  note: |
+    This skill follows the open SKILL.md standard and is specifically optimized for **Grok** inside the **Grok Build CLI / TUI**.
+
+permissions:
+  profile: "Analysis + Documentation Generation"
+
+  tools_used:
+    terminal_shell: "No"
+    read_files: "Sometimes – May reference previous prompts or examples."
+    write_files: "Yes – Required to generate the optimized prompt."
+    browser: "No"
+    network_access: "No"
+
+  file_scopes:
+    - "**/*.md"
+    - ".agentskills/**"
+
+  environment_variables: []
+
+  allowed_hosts: []
+
+  notes: |
+    This is a lightweight, high-leverage free meta skill focused purely on prompt optimization.
+```

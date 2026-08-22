@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "token-optimizer": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "${pluginDir}",
+        "python",
+        "-m",
+        "token_optimizer.server"
+      ]
+    }
+  }
+}
