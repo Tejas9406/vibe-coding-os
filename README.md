@@ -1,8 +1,8 @@
 # 🚀 AI-Vibe Coding Agent: Quick Start Guide
 
-Welcome! This is a simple cheat sheet to guide your AI agent through different workflows. 
+Welcome! This is the master repository for universal coding agent skills. 
 
-For any task, start by telling your AI agent to read the base instructions (`AGENT.md`), choose the appropriate skill, and follow the template below.
+For any task, start by telling your AI agent to read the base instructions (`AGENT.md`), choose the appropriate skill, and follow the workflows below.
 
 ---
 
@@ -15,7 +15,7 @@ Read AGENT.md
 Read skills/00-core/project-orchestrator/SKILL.md
 
 Problem Statement: [Describe your project]
-Tech Stack: [e.g., React, Next.js, Node.js]
+Tech Stack: [e.g., React, Next.js, FastAPI, Node.js]
 
 Instructions:
 1. Classify project scope (Small/Medium/Large).
@@ -33,8 +33,8 @@ Read skills/03-development/code-review/SKILL.md
 Task: [e.g., Add Google OAuth, build user profile page]
 
 Instructions:
-1. Scan relevant files using `read_skeleton` (do not load whole files).
-2. Locate exact code blocks to change using `read_symbol`.
+1. Scan relevant files using skeletons or line-range reads (do not load whole files).
+2. Locate exact code blocks to change.
 3. Propose and apply changes, then run Code Reviewer to check them.
 4. Use Git Commit Writer for a clean commit message.
 ```
@@ -54,7 +54,36 @@ Instructions:
 3. Show the Strategy Report first. Pass Quality Gates before writing code.
 ```
 
-### 4. Pure Research (No Code)
+### 4. UI Design & Modern Frontend
+Use this to build beautiful interfaces with curated typography, harmonious color themes, and spring physics.
+```markdown
+Read AGENT.md
+Read skills/04-ui/artifacts-builder/SKILL.md
+Read skills/04-ui/theme-factory/SKILL.md
+Read skills/04-ui/motion-wizard/SKILL.md
+
+UI Goal: [e.g., Build a modern SaaS analytics dashboard with dark mode]
+```
+
+### 5. Automated E2E Testing (Playwright)
+Use this to test web applications, check responsiveness, and prevent visual or API regressions.
+```markdown
+Read AGENT.md
+Read skills/03-development/webapp-testing/SKILL.md
+
+Testing Goal: [e.g., Test checkout flow and responsive design across desktop and mobile]
+```
+
+### 6. Document Generation (DOCX, PDF, PPTX, XLSX)
+Use this when you need pitch decks, financial sheets, or formal reports.
+```markdown
+Read AGENT.md
+Read skills/05-documentation/document-skills/[docx|pdf|pptx|xlsx]/SKILL.md
+
+Document Goal: [e.g., Create a 10-slide presentation deck]
+```
+
+### 7. Pure Research (No Code)
 Use this to analyze technologies, compare databases, or write reports without writing code.
 ```markdown
 Read AGENT.md
@@ -63,39 +92,4 @@ Read skills/01-research/deep-research-team/SKILL.md
 Research Topic: [e.g., pgvector vs Pinecone vs Milvus]
 Goal: [e.g., Compare speed, latency, cost]
 Mode: [Quick or Full]
-
-Instructions:
-1. Run the Deep Research Team workflow.
-2. Cross-validate sources and output a structured markdown report. Do not write code.
-```
-
-### 5. Open Source Contributions
-Use this when contributing to external codebases with strict guidelines.
-```markdown
-Read AGENT.md
-Read skills/03-development/token-optimizer/SKILL.md
-Read skills/03-development/code-review/SKILL.md
-
-Issue/Feature: [Paste GitHub issue or details]
-
-Instructions:
-1. Check the project's contributing guidelines and conventions.
-2. Map repository layout using `read_skeleton`.
-3. Write a minimal, clean solution.
-4. Run Code Reviewer to check for style issues or regressions.
-```
-
-### 6. Writing & Running Tests
-Use this to write unit/integration tests or debug failing tests.
-```markdown
-Read AGENT.md
-Read skills/03-development/token-optimizer/SKILL.md
-Read skills/03-development/code-review/SKILL.md
-
-Testing Goal: [e.g., Add Jest tests for all auth routes]
-
-Instructions:
-1. Find untested code.
-2. Draft tests matching the existing test patterns.
-3. Run tests using `exec_smart` to focus only on error/failure outputs.
 ```

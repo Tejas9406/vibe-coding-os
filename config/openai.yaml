@@ -1,4 +1,0 @@
-interface:
-  display_name: "Humanize Writing"
-  short_description: "Rewrite text to sound natural and human."
-  default_prompt: "Use $humanize-writing to rewrite this text so it sounds natural, human, and locally fluent without changing meaning."

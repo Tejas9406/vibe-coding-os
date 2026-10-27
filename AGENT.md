@@ -50,7 +50,8 @@ skills/
 │       ├── SKILL.md
 │       └── references/
 │           ├── universal-master-blueprint.md   ← Full 2,462-line master
-│           └── token-economy-patterns.md       ← Token optimization patterns
+│           ├── token-economy-patterns.md       ← Token optimization patterns
+│           └── project-patterns.md             ← 20+ production architecture templates
 │
 ├── 01-research/                      ← INTELLIGENCE
 │   └── deep-research-team/           ← Multi-agent research (SCOPE-M/L)
@@ -65,26 +66,44 @@ skills/
 ├── 02-architecture/                  ← STRUCTURE (Conditional, SCOPE-M/L)
 │   ├── system-design/                ← Distributed systems, CAP, microservices
 │   │   └── SKILL.md
-│   └── devops/                       ← CI/CD, Kubernetes, monitoring
+│   └── devops/                       ← CI/CD, Kubernetes, monitoring, GitOps
 │       └── SKILL.md
 │
-├── 03-development/                   ← BUILD (Active during coding)
-│   ├── token-optimizer/              ← Always active — read skeletons, not full files
+├── 03-development/                   ← BUILD & TEST (Active during coding)
+│   ├── token-optimizer/              ← Read skeletons/symbols, reduce context bloat
+│   │   ├── SKILL.md
+│   │   └── mcp_server/               ← (Optional) local FastMCP server
+│   ├── code-review/                  ← Code reviewer for bugs & security
 │   │   └── SKILL.md
-│   ├── code-review/                  ← After every feature
+│   ├── git-commit-writer/            ← Conventional commit message generator
 │   │   └── SKILL.md
-│   ├── git-commit-writer/            ← Before every commit
+│   ├── webapp-testing/               ← Playwright end-to-end browser testing
 │   │   └── SKILL.md
-│   └── prompt-injection-defense/     ← Any AI/LLM component
+│   ├── mcp-builder/                  ← Build Model Context Protocol servers
+│   │   └── SKILL.md
+│   └── prompt-injection-defense/     ← Security audits for AI/LLM components
 │       └── SKILL.md
 │
-├── 04-ui/                            ← POLISH (After functional UI exists)
+├── 04-ui/                            ← POLISH & FRONTEND DESIGN
+│   ├── artifacts-builder/            ← React 18 + Vite + Tailwind + shadcn/ui
+│   │   └── SKILL.md
+│   ├── theme-factory/                ← Curated color palettes & font pairings
+│   │   └── SKILL.md
+│   ├── canvas-design/                ← Visual graphic & canvas designs
+│   │   └── SKILL.md
 │   └── motion-wizard/                ← Micro-interactions, Framer Motion
 │       └── SKILL.md
 │
-├── 05-documentation/                 ← SHIP
-│   └── readme-generator/             ← Professional README from codebase scan
-│       └── SKILL.md
+├── 05-documentation/                 ← SHIP & ASSETS
+│   ├── readme-generator/             ← Professional README from codebase scan
+│   │   └── SKILL.md
+│   ├── changelog-generator/          ← Standard CHANGELOG generator
+│   │   └── SKILL.md
+│   └── document-skills/              ← Word (.docx), PDF, PowerPoint (.pptx), Excel (.xlsx)
+│       ├── docx/SKILL.md
+│       ├── pdf/SKILL.md
+│       ├── pptx/SKILL.md
+│       └── xlsx/SKILL.md
 │
 ├── 06-writing/                       ← COMMUNICATION
 │   └── humanize-writing/             ← Presentations, docs, copy
@@ -93,7 +112,7 @@ skills/
 │           └── rewrite-playbook.md
 │
 ├── 07-meta/                          ← SYSTEM IMPROVEMENT
-│   ├── prompt-optimizer/             ← Grok-optimized prompt engineering
+│   ├── prompt-optimizer/             ← Systematic prompt engineering
 │   │   └── SKILL.md
 │   ├── prompt-to-skill/              ← Turn repeated prompts into skills
 │   │   └── SKILL.md
@@ -103,27 +122,6 @@ skills/
 └── 08-platform/                      ← PLATFORM ADAPTERS
     └── claude-code-settings/         ← Claude Code hooks & settings
         └── SKILL.md
-
-tools/
-└── token-optimizer/                  ← MCP server implementation
-    ├── server.py
-    ├── tools.py
-    ├── main.py
-    ├── __init__.py
-    ├── install.sh
-    ├── install.ps1
-    └── inject_claude_config.py
-
-config/
-├── mcp-config.json                   ← MCP server configuration
-├── openai.yaml                       ← OpenAI provider config
-└── grok.yaml                         ← Grok provider config
-
-docs/
-├── README.md                         ← Original project documentation
-├── architecture-overview.md          ← System architecture notes
-├── project-patterns.md               ← Reusable project patterns library
-└── benchmarks.md                     ← Token optimizer benchmarks
 ```
 
 ---
@@ -133,9 +131,10 @@ docs/
 | Project Type | Active Skills |
 |-------------|--------------|
 | Simple app / utility | Universal Builder + Token Optimizer + Code Review + Git + README |
-| SaaS / multi-user platform | + System Design + Prompt Injection (if AI) + Motion Wizard + DevOps |
+| Web app / Frontend rich | + Artifacts Builder + Theme Factory + Motion Wizard + Webapp Testing |
+| SaaS / multi-user platform | + System Design + Prompt Injection (if AI) + DevOps + Changelog |
 | Hackathon / national scale | ALL skills — full master blueprint + deep research |
-| Writing / documentation only | Universal Builder + Humanize Writing |
+| Writing / documentation only | Universal Builder + Humanize Writing + Document Skills |
 | Improving the skill system | Prompt-to-Skill + Skill Creator + Prompt Optimizer |
 
 ---
@@ -153,22 +152,25 @@ LAYER 2 — SPECIALIST INTELLIGENCE
 ├── System Design Engine
 └── DevOps Decision Engine
 
-LAYER 3 — DEVELOPMENT EXECUTION
+LAYER 3 — DEVELOPMENT & TESTING
 ├── Token Optimizer
 ├── Code Reviewer
 ├── Git Commit Writer
-├── Prompt Injection Defense
-└── README Generator
+├── Webapp Testing (Playwright)
+├── MCP Builder
+└── Prompt Injection Defense
 
-LAYER 4 — META (Build the Builder)
-├── Prompt Optimizer
-├── Prompt-to-Skill Converter
-└── Skill Creator
+LAYER 4 — UI & CREATIVE DESIGN
+├── Artifacts Builder (React/Tailwind/shadcn)
+├── Theme Factory
+├── Canvas Design
+└── Motion Wizard
 
-LAYER 5 — INFRASTRUCTURE
-├── MCP Token Optimizer server
-├── Provider configs
-└── Platform adapters
+LAYER 5 — DOCUMENTATION & DELIVERABLES
+├── README Generator
+├── Changelog Generator
+├── Document Skills (DOCX, PDF, PPTX, XLSX)
+└── Humanize Writing
 ```
 
 ---
@@ -183,29 +185,31 @@ This single rule is what separates a 3/10 project from a 9/10 project.
 
 ## 📖 How to Use This in New Projects
 
-### Option A — Copy the whole folder
-```bash
-cp -r AI-Vibe-Coding-Agent /path/to/your/new-project/.agents/
+### Option A — Reference from your centralized skills folder (Recommended)
+Keep this repository at `D:/SKILLS` (or your preferred global folder), and in any project tell your AI agent:
 ```
-Then tell your AI agent:
-```
-Read AGENT.md and skills/00-core/project-orchestrator/SKILL.md first.
+Read D:/SKILLS/AGENT.md
+Read D:/SKILLS/skills/00-core/project-orchestrator/SKILL.md
 My problem statement is: [YOUR PS]
 ```
 
-### Option B — Point your AI to this folder globally
-In your AI agent settings (e.g., Claude Code `~/.claude/settings.json`):
-```json
-{
-  "skills_path": "D:/Projects/SKILL FILES/AI-Vibe-Coding-Agent/skills"
-}
+### Option B — Copy into project's `.agents/` folder
+```bash
+cp -r skills /path/to/your/new-project/.agents/skills/
+cp AGENT.md /path/to/your/new-project/.agents/AGENT.md
+```
+Then tell your AI agent:
+```
+Read .agents/AGENT.md and .agents/skills/00-core/project-orchestrator/SKILL.md first.
+My problem statement is: [YOUR PS]
 ```
 
-### Option C — Reference skills selectively
-Tell your agent:
-```
-Load skill from D:/Projects/SKILL FILES/AI-Vibe-Coding-Agent/skills/00-core/project-orchestrator/SKILL.md
-My project: [YOUR PS]
+### Option C — Global Skills Directory
+Point your AI agent settings (e.g. Claude Code `~/.claude/settings.json` or Antigravity config) to this `skills` directory:
+```json
+{
+  "skills_path": "D:/SKILLS/skills"
+}
 ```
 
 ---

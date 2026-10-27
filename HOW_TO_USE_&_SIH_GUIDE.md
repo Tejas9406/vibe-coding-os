@@ -1,8 +1,8 @@
 # 📖 Universal AI-Vibe Agent & SIH Guide
 
-> **Your Cheat Sheet for Vibe-Coding any task with maximum efficiency and minimal token usage.**
+> **Your Cheat Sheet for Vibe-Coding any task with maximum efficiency, minimal token usage, and production quality.**
 
-This file provides the exact prompts to feed your AI agent along with your task or problem statement. Always run these from the root directory of your workspace (or point the agent directly to these files).
+This file provides the exact prompts to feed your AI agent along with your task or problem statement. Run these from your project directory (or adjust paths if referencing from a central skills folder like `D:/SKILLS`).
 
 ---
 
@@ -10,8 +10,8 @@ This file provides the exact prompts to feed your AI agent along with your task 
 Use this when you are starting a project from absolute scratch.
 
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\00-core\project-orchestrator\SKILL.md
+Read AGENT.md
+Read skills/00-core/project-orchestrator/SKILL.md
 
 Problem Statement: [Paste your problem statement or project idea here]
 Desired Tech Stack: [e.g., React + Node.js, Next.js + FastAPI, or "Suggest the most token-efficient stack"]
@@ -28,15 +28,15 @@ Instructions:
 Use this when you have an already established codebase and you want the agent to add a new page, fix a workflow, or update existing functions.
 
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\token-optimizer\SKILL.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\code-review\SKILL.md
+Read AGENT.md
+Read skills/03-development/token-optimizer/SKILL.md
+Read skills/03-development/code-review/SKILL.md
 
 Task: [e.g., Add Google OAuth to the login page / Add a user profile page / Refactor the payment processing module]
 
 Instructions:
-1. Use D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\token-optimizer\SKILL.md to map out the relevant files using `read_skeleton` first. Do not load entire files.
-2. Locate the precise code blocks to change using `read_symbol`.
+1. Use token-optimizer rules to inspect relevant files using line-range slices or skeletons first. Do not load entire files.
+2. Locate the precise code blocks to change.
 3. Propose changes. Once approved, apply the changes and invoke the Code Reviewer to check the modification.
 4. Use the Git Commit Writer to generate a clean conventional commit message.
 ```
@@ -47,8 +47,8 @@ Instructions:
 Use this to build robust, deployment-ready projects that impress hackathon judges, government bodies, and industry sponsors.
 
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\00-core\universal-project-builder\references\universal-master-blueprint.md
+Read AGENT.md
+Read skills/00-core/universal-project-builder/references/universal-master-blueprint.md
 
 SIH Problem Statement Code & Title: [e.g., SIH1423 - AI-Based Crop Yield Prediction]
 Ministry/Organization: [e.g., Ministry of Agriculture]
@@ -61,12 +61,48 @@ Instructions:
 
 ---
 
-## 4. How to Use for Pure Research (No Code Writing)
+## 4. How to Use for Frontend Polish & UI Design
+Use this when building web applications, dashboards, or landing pages that need stunning aesthetics, cohesive typography/colors, and smooth animations.
+
+```markdown
+Read AGENT.md
+Read skills/04-ui/artifacts-builder/SKILL.md
+Read skills/04-ui/theme-factory/SKILL.md
+Read skills/04-ui/motion-wizard/SKILL.md
+
+UI Goal: [e.g., Build a modern SaaS analytics dashboard with dark mode and micro-interactions]
+
+Instructions:
+1. Select a cohesive color palette and typography pairing using Theme Factory.
+2. Construct the layout and components using Artifacts Builder (React/Tailwind/shadcn).
+3. Apply spring physics and micro-interactions using Motion Wizard (hardware-accelerated transforms, zero layout shifts).
+```
+
+---
+
+## 5. How to Use for Web App E2E Testing
+Use this to run automated browser testing and verify frontend workflows using Playwright.
+
+```markdown
+Read AGENT.md
+Read skills/03-development/webapp-testing/SKILL.md
+
+Testing Goal: [e.g., Verify user login flow, form submission, and responsive mobile layout]
+
+Instructions:
+1. Follow the webapp-testing decision tree.
+2. Manage the dev server lifecycle using scripts/with_server.py if needed.
+3. Write targeted Playwright test scripts, take screenshots of critical flows, and report any UI/API regressions.
+```
+
+---
+
+## 6. How to Use for Pure Research (No Code Writing)
 Use this when you want to explore a topic, gather data, write reports, or analyze technologies without actually creating code files.
 
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\01-research\deep-research-team\SKILL.md
+Read AGENT.md
+Read skills/01-research/deep-research-team/SKILL.md
 
 Research Topic: [e.g., Comparative analysis of vector databases (pgvector vs Pinecone vs Milvus) for production RAG systems]
 Research Goal: [e.g., Evaluate latency, indexing speed, host pricing, and ease of scaling]
@@ -80,39 +116,25 @@ Instructions:
 
 ---
 
-## 5. How to Use for Open Source Contributions (Fixing Bugs / Adding Features)
-Use this when contributing to an external repository where you must strictly adhere to the existing codebase structure, avoid regressions, and follow strict review guidelines.
+## 7. How to Use for Generating Professional Documents
+Use this when you need Word (.docx), PDF, PowerPoint (.pptx), or Excel (.xlsx) deliverables for business presentations, government submissions, or client reports.
 
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\token-optimizer\SKILL.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\code-review\SKILL.md
+Read AGENT.md
+Read skills/05-documentation/document-skills/[docx|pdf|pptx|xlsx]/SKILL.md
 
-GitHub Issue / Contribution Request: [Paste GitHub issue details or feature request description here]
+Document Goal: [e.g., Create a 10-slide executive pitch deck for the SIH project / Generate an Excel financial forecast model]
 
 Instructions:
-1. Check the project's contributing guidelines (e.g., CONTRIBUTING.md) and coding conventions.
-2. Map the existing repository architecture using `read_skeleton` first.
-3. Draft a minimal, non-breaking solution targeting only the necessary files.
-4. Pass the changes through the Code Reviewer, checking specifically for regressions and styling mismatches.
-5. Create a detailed commit message with conventional commits and list testing steps.
+1. Follow the specific document-skill formatting guidelines.
+2. Use Python scripts to generate clean, professionally styled files with exact styling.
 ```
 
 ---
 
-## 6. How to Use for Testing Purposes
-Use this when you want to write unit tests, integration tests, end-to-end tests, or run test suites to ensure codebase reliability.
-
+## 8. Centralized Reference Hint
+If you keep your skills centralized in `D:/SKILLS`, prefix any `skills/...` path in the prompts with your global directory:
 ```markdown
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\AGENT.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\token-optimizer\SKILL.md
-Read D:\Projects\SKILL FILES\AI-Vibe-Coding-Agent\skills\03-development\code-review\SKILL.md
-
-Testing Goal: [e.g., Write Jest unit tests for all auth routes / Add Cypress integration tests for user registration flow]
-
-Instructions:
-1. Scan current routes/files to identify untested files.
-2. Draft tests using the appropriate framework (Jest, PyTest, Playwright, Cypress, etc.) matching current code conventions.
-3. Execute the tests using `exec_smart` from the token optimizer to truncate long logs and focus only on failures.
-4. Keep patching tests/code until all tests pass successfully.
+Read D:/SKILLS/AGENT.md
+Read D:/SKILLS/skills/00-core/project-orchestrator/SKILL.md
 ```

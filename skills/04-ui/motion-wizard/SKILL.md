@@ -1,11 +1,7 @@
 ---
-_agensi: "ee00a314-3f09-4692-9bb3-d010aeea469f"
----
-
-\---
-
-name: "Motion Wizard"
-\_agensi: "frontend-motion-wizard-v1"
+name: motion-wizard
+description: Audits codebases and injects optimized micro-interactions, spring physics (Framer Motion/Tailwind), GPU-accelerated transitions, and mobile-first responsive layout adaptations. Use when adding UI polish, smooth animations, or fixing layout shifts.
+tags: ["ui", "animation", "motion", "framer-motion", "frontend", "responsive"]
 ---
 
 # SYSTEM\_INSTRUCTION: UI MOTION \& BREAKPOINT ADAPTER
