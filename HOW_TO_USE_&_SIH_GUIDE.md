@@ -6,6 +6,27 @@ This file provides the exact prompts to feed your AI agent along with your task 
 
 ---
 
+## 0. Universal Initial Agent Kickoff Prompt (One-Shot Recon & Setup)
+Use this prompt as your opening command for **any** repository (new or existing) to instruct the AI agent to ingest the skills and prepare for production execution:
+
+```markdown
+This is the repository we need to work on: [PASTE_REPO_URL_OR_LOCAL_PATH]
+(e.g., https://github.com/Tejas9406/DastaavezAI.git or current workspace)
+
+1. Fetch and scan the current codebase architecture, existing implementations, tech stack, and active dependencies.
+2. Read the master operating instructions in AGENT.md and review the skills/ directory (which contains complete industry-standard production rules: orchestration, architecture, token-efficiency, UI polish, E2E testing, and quality gates).
+3. Analyze what is currently working, what is half-implemented, and what architecture gaps exist.
+4. Prepare the project to execute the next phase with 100% production readiness:
+   - Zero errors / clean compilation
+   - Fully connected pipelines & intact data flow
+   - Optimal system design (load-handling, concurrency, caching, optimal time & space complexity)
+   - Adherence to pre-coding quality gates before committing code changes.
+
+Provide a concise reconnaissance summary of the current state, and stand by for my specific feature instructions.
+```
+
+---
+
 ## 1. How to Use on a Brand New Problem Statement (New Project)
 Use this when you are starting a project from absolute scratch.
 

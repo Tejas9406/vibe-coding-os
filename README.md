@@ -43,6 +43,28 @@ Problem Statement
 
 ## 🚀 How to Use Across Any Machine or Project
 
+### ⚡ Universal Initial Agent Kickoff Prompt (Zero-Prompting Start)
+
+Whenever you start an AI coding session in any agent (Claude Code, Google Antigravity, Cursor, Windsurf, Copilot, Roo/Cline) for an existing or new repository, **copy and paste this single initial prompt**:
+
+```markdown
+This is the repository we need to work on: [PASTE_REPO_URL_OR_LOCAL_PATH]
+(e.g., https://github.com/Tejas9406/DastaavezAI.git or current workspace)
+
+1. Fetch and scan the current codebase architecture, existing implementations, tech stack, and active dependencies.
+2. Read the master operating instructions in AGENT.md and review the skills/ directory (which contains complete industry-standard production rules: orchestration, architecture, token-efficiency, UI polish, E2E testing, and quality gates).
+3. Analyze what is currently working, what is half-implemented, and what architecture gaps exist.
+4. Prepare the project to execute the next phase with 100% production readiness:
+   - Zero errors / clean compilation
+   - Fully connected pipelines & intact data flow
+   - Optimal system design (load-handling, concurrency, caching, optimal time & space complexity)
+   - Adherence to pre-coding quality gates before committing code changes.
+
+Provide a concise reconnaissance summary of the current state, and stand by for my specific feature instructions.
+```
+
+---
+
 ### Method 1: Centralized Hub (Recommended — Zero Clutter)
 Clone this repository **once** into a permanent location on your PC (e.g., `D:\SKILLS` on Windows, or `~/SKILLS` on macOS/Linux):
 
